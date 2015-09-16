@@ -1,0 +1,57 @@
+POST /v1/players
+----------------
+
+Parameters:
+  * type -       Must always be set to <code>players</code>.
+
+  * user -       The related user.
+
+
+Request:
+  POST /v1/players
+  Authorization: Bearer 2f2766cf888837a5f9ecef614897d63def13e9d27d159ca1496ee734f6a27b24
+  Content-Type: application/vnd.api+json
+
+  {"data":{"type":"players","relationships":{"user":{"data":{"id":"10","type":"users"}}}}}
+
+Response:
+  Status: 201 Created
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"1","type":"players","links":{"self":"http://example.org/v1/players/1"},"attributes":{"created-at":"2015-09-16T03:42:38.971Z","updated-at":"2015-09-16T03:42:38.971Z"},"relationships":{"user":{"links":{"self":"http://example.org/v1/players/1/relationships/user","related":"http://example.org/v1/players/1/user"},"data":{"type":"users","id":"10"}}}}}
+
+
+GET /v1/players
+---------------
+
+Request:
+  GET /v1/players
+  Authorization: Bearer 90dae196626c7520527634886fae16ac83c19a56a216b4429436b3415e96933c
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"2","type":"players","links":{"self":"http://example.org/v1/players/2"},"attributes":{"created-at":"2015-09-16T03:42:39.004Z","updated-at":"2015-09-16T03:42:39.004Z"},"relationships":{"user":{"links":{"self":"http://example.org/v1/players/2/relationships/user","related":"http://example.org/v1/players/2/user"},"data":{"type":"users","id":"11"}}}}]}
+
+
+GET /v1/players/:id
+-------------------
+
+Parameters:
+  * id -       ID of the player to be retrieved.
+
+
+Request:
+  GET /v1/players/3
+  Authorization: Bearer ff1c9528e6dbd9eb0d62f4add7bfbb6964229dc692f154543576dce2f0b92d47
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"3","type":"players","links":{"self":"http://example.org/v1/players/3"},"attributes":{"created-at":"2015-09-16T03:42:39.032Z","updated-at":"2015-09-16T03:42:39.032Z"},"relationships":{"user":{"links":{"self":"http://example.org/v1/players/3/relationships/user","related":"http://example.org/v1/players/3/user"},"data":{"type":"users","id":"13"}}}}}
+
+

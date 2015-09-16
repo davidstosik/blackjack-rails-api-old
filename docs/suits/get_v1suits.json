@@ -1,0 +1,35 @@
+{
+  "resource": "Suits",
+  "http_method": "GET",
+  "route": "/v1/suits",
+  "description": "GET /v1/suits",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/suits",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer e971ff8e201864d386753e86de23158b681eff1f044ad267bc627cf59874be7e"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"C\",\"type\":\"suits\",\"links\":{\"self\":\"http://example.org/v1/suits/C\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:38.560Z\",\"updated-at\":\"2015-09-16T03:42:38.560Z\",\"initial\":\"C\",\"color\":\"black\"}},{\"id\":\"D\",\"type\":\"suits\",\"links\":{\"self\":\"http://example.org/v1/suits/D\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:38.564Z\",\"updated-at\":\"2015-09-16T03:42:38.564Z\",\"initial\":\"D\",\"color\":\"red\"}},{\"id\":\"H\",\"type\":\"suits\",\"links\":{\"self\":\"http://example.org/v1/suits/H\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:38.562Z\",\"updated-at\":\"2015-09-16T03:42:38.562Z\",\"initial\":\"H\",\"color\":\"red\"}},{\"id\":\"S\",\"type\":\"suits\",\"links\":{\"self\":\"http://example.org/v1/suits/S\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:38.556Z\",\"updated-at\":\"2015-09-16T03:42:38.556Z\",\"initial\":\"S\",\"color\":\"black\"}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

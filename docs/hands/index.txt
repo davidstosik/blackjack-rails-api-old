@@ -1,0 +1,34 @@
+GET /v1/hands/:id
+-----------------
+
+Parameters:
+  * id -       ID of the hand to be retrieved.
+
+
+Request:
+  GET /v1/hands/6
+  Authorization: Bearer d937d46e9f49096a9d7e5515c1299ed73932d16eeb831788b7882ad70e10d9b4
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"6","type":"hands","links":{"self":"http://example.org/v1/hands/6"},"attributes":{"created-at":"2015-09-16T03:42:39.707Z","updated-at":"2015-09-16T03:42:39.707Z","position":1},"relationships":{"round":{"links":{"self":"http://example.org/v1/hands/6/relationships/round","related":"http://example.org/v1/hands/6/round"},"data":{"type":"rounds","id":"8"}}}}}
+
+
+GET /v1/hands
+-------------
+
+Request:
+  GET /v1/hands
+  Authorization: Bearer b0646ba047e85c8201f6b318694a27c74e8084b5407d84b491b4a0be21e6f197
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"7","type":"hands","links":{"self":"http://example.org/v1/hands/7"},"attributes":{"created-at":"2015-09-16T03:42:39.741Z","updated-at":"2015-09-16T03:42:39.741Z","position":1},"relationships":{"round":{"links":{"self":"http://example.org/v1/hands/7/relationships/round","related":"http://example.org/v1/hands/7/round"},"data":{"type":"rounds","id":"9"}}}}]}
+
+

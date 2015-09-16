@@ -1,0 +1,34 @@
+GET /v1/suits/:id
+-----------------
+
+Parameters:
+  * id -       ID of the suit to be retrieved.
+
+
+Request:
+  GET /v1/suits/S
+  Authorization: Bearer 9620a959e8d09e146ae7080885359832d120eba7878d8c292d2fea231b7d27c4
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"S","type":"suits","links":{"self":"http://example.org/v1/suits/S"},"attributes":{"created-at":"2015-09-16T03:42:38.556Z","updated-at":"2015-09-16T03:42:38.556Z","initial":"S","color":"black"}}}
+
+
+GET /v1/suits
+-------------
+
+Request:
+  GET /v1/suits
+  Authorization: Bearer e971ff8e201864d386753e86de23158b681eff1f044ad267bc627cf59874be7e
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"C","type":"suits","links":{"self":"http://example.org/v1/suits/C"},"attributes":{"created-at":"2015-09-16T03:42:38.560Z","updated-at":"2015-09-16T03:42:38.560Z","initial":"C","color":"black"}},{"id":"D","type":"suits","links":{"self":"http://example.org/v1/suits/D"},"attributes":{"created-at":"2015-09-16T03:42:38.564Z","updated-at":"2015-09-16T03:42:38.564Z","initial":"D","color":"red"}},{"id":"H","type":"suits","links":{"self":"http://example.org/v1/suits/H"},"attributes":{"created-at":"2015-09-16T03:42:38.562Z","updated-at":"2015-09-16T03:42:38.562Z","initial":"H","color":"red"}},{"id":"S","type":"suits","links":{"self":"http://example.org/v1/suits/S"},"attributes":{"created-at":"2015-09-16T03:42:38.556Z","updated-at":"2015-09-16T03:42:38.556Z","initial":"S","color":"black"}}]}
+
+

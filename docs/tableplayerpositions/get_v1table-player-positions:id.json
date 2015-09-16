@@ -1,0 +1,39 @@
+{
+  "resource": "TablePlayerPositions",
+  "http_method": "GET",
+  "route": "/v1/table-player-positions/:id",
+  "description": "GET /v1/table-player-positions/:id",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "      ID of the table player position to be retrieved.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/table-player-positions/2",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer dd989b8f4b7a9557bb3dcd3e401a896df4050d95db1a234e377add6a85e95019"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":\"2\",\"type\":\"table-player-positions\",\"links\":{\"self\":\"http://example.org/v1/table-player-positions/2\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.564Z\",\"updated-at\":\"2015-09-16T03:42:39.564Z\",\"position\":1},\"relationships\":{\"table\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/2/relationships/table\",\"related\":\"http://example.org/v1/table-player-positions/2/table\"},\"data\":{\"type\":\"tables\",\"id\":\"6\"}},\"player\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/2/relationships/player\",\"related\":\"http://example.org/v1/table-player-positions/2/player\"},\"data\":{\"type\":\"players\",\"id\":\"7\"}},\"hands\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/2/relationships/hands\",\"related\":\"http://example.org/v1/table-player-positions/2/hands\"}},\"current-hands\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/2/relationships/current-hands\",\"related\":\"http://example.org/v1/table-player-positions/2/current-hands\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

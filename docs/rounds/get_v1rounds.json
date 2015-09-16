@@ -1,0 +1,35 @@
+{
+  "resource": "Rounds",
+  "http_method": "GET",
+  "route": "/v1/rounds",
+  "description": "GET /v1/rounds",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/rounds",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 26fdc5b7725980efb37bc561899ca2ffccefebcebb9df966ba94986c73ec8aae"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"3\",\"type\":\"rounds\",\"links\":{\"self\":\"http://example.org/v1/rounds/3\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.352Z\",\"updated-at\":\"2015-09-16T03:42:39.352Z\",\"initial-betting-closed-at\":\"2015-09-16T03:43:09.346Z\",\"active\":true},\"relationships\":{\"table\":{\"links\":{\"self\":\"http://example.org/v1/rounds/3/relationships/table\",\"related\":\"http://example.org/v1/rounds/3/table\"},\"data\":{\"type\":\"tables\",\"id\":\"3\"}}}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

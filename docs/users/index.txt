@@ -1,0 +1,101 @@
+PATCH /v1/users/:id
+-------------------
+
+Parameters:
+  * id -       ID of the user to be updated.
+
+  * type -       Must always be set to <code>users</code>.
+
+  * username -       The unique identifier for the user.
+
+  * password -       The password with which the user with authenticate.
+
+
+Request:
+  PATCH /v1/users/15
+  Authorization: Bearer 28baa826455ae121d1789a674ddc6dccc42897ea2d0212c325d593751f9d16e3
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"15","type":"users","attributes":{"username":"seand","password":"!drowssap"}}}
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"15","type":"users","links":{"self":"http://example.org/v1/users/15"},"attributes":{"created-at":"2015-09-16T03:42:39.059Z","updated-at":"2015-09-16T03:42:39.074Z","username":"seand","pit-boss":false}}}
+
+
+POST /v1/users
+--------------
+
+Parameters:
+  * type -       Must always be set to <code>users</code>.
+
+  * username -       The unique identifier for the user.
+
+  * password -       The password with which the user with authenticate.
+
+
+Request:
+  POST /v1/users
+  Authorization: Bearer 61a690acc81eb5030b3e3839174a89baf8db6a7cc8f51f271155dc9d45bdbf8d
+  Content-Type: application/vnd.api+json
+
+  {"data":{"type":"users","attributes":{"username":"sean","password":"drowssap"}}}
+
+Response:
+  Status: 201 Created
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"17","type":"users","links":{"self":"http://example.org/v1/users/17"},"attributes":{"created-at":"2015-09-16T03:42:39.098Z","updated-at":"2015-09-16T03:42:39.098Z","username":"sean","pit-boss":false}}}
+
+
+GET /v1/users/me
+----------------
+
+Request:
+  GET /v1/users/me
+  Authorization: Bearer 8533ba0120116747a9df1a2c5f840dcf369b8184915556b9067a007626e8d050
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"18","type":"users","links":{"self":"http://example.org/v1/users/18"},"attributes":{"created-at":"2015-09-16T03:42:39.109Z","updated-at":"2015-09-16T03:42:39.109Z","username":"sean","pit-boss":false}}}
+
+
+GET /v1/users/:id
+-----------------
+
+Parameters:
+  * id -       ID of the user to be retrieved.
+
+
+Request:
+  GET /v1/users/19
+  Authorization: Bearer 196a1bd32707e1091040edca51077b332d231e7b4997f5fc0e50af757ac27bb4
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"19","type":"users","links":{"self":"http://example.org/v1/users/19"},"attributes":{"created-at":"2015-09-16T03:42:39.129Z","updated-at":"2015-09-16T03:42:39.129Z","username":"sean","pit-boss":false}}}
+
+
+GET /v1/users
+-------------
+
+Request:
+  GET /v1/users
+  Authorization: Bearer 523eabc5a8ba556be4942eb1444be27e8e1ba8b8ade659f9177035cac4f564ee
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"20","type":"users","links":{"self":"http://example.org/v1/users/20"},"attributes":{"created-at":"2015-09-16T03:42:39.153Z","updated-at":"2015-09-16T03:42:39.153Z","username":"sean","pit-boss":false}}]}
+
+

@@ -1,0 +1,35 @@
+{
+  "resource": "Transactions",
+  "http_method": "GET",
+  "route": "/v1/transactions",
+  "description": "GET /v1/transactions",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/transactions",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 2021fb2267f2591fc24c6f9ef4e238cc44eb80a41a1c0652407bfd9cc766294c"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"4\",\"type\":\"transactions\",\"links\":{\"self\":\"http://example.org/v1/transactions/4\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.247Z\",\"updated-at\":\"2015-09-16T03:42:39.247Z\",\"kind\":\"wager\",\"amount\":\"-100.0\"},\"relationships\":{\"player\":{\"links\":{\"self\":\"http://example.org/v1/transactions/4/relationships/player\",\"related\":\"http://example.org/v1/transactions/4/player\"},\"data\":{\"type\":\"players\",\"id\":\"4\"}},\"action\":{\"links\":{\"self\":\"http://example.org/v1/transactions/4/relationships/action\",\"related\":\"http://example.org/v1/transactions/4/action\"},\"data\":{\"type\":\"wagers\",\"id\":\"1\"}}}},{\"id\":\"5\",\"type\":\"transactions\",\"links\":{\"self\":\"http://example.org/v1/transactions/5\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.258Z\",\"updated-at\":\"2015-09-16T03:42:39.258Z\",\"kind\":\"credit\",\"amount\":\"1000.0\"},\"relationships\":{\"player\":{\"links\":{\"self\":\"http://example.org/v1/transactions/5/relationships/player\",\"related\":\"http://example.org/v1/transactions/5/player\"},\"data\":{\"type\":\"players\",\"id\":\"4\"}},\"action\":{\"links\":{\"self\":\"http://example.org/v1/transactions/5/relationships/action\",\"related\":\"http://example.org/v1/transactions/5/action\"},\"data\":null}}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

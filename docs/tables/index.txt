@@ -1,0 +1,55 @@
+POST /v1/tables
+---------------
+
+Parameters:
+  * type -       Must always be set to <code>tables</code>.
+
+  * table-rule-set -       The rule set that governs the table.
+
+
+Request:
+  POST /v1/tables
+  Authorization: Bearer e3ed252afebf5c8fd4b984c708e685759fb752cf4593aa8ac3d62e13975abb1b
+  Content-Type: application/vnd.api+json
+
+  {"data":{"type":"tables","relationships":{"table-rule-set":{"data":{"id":"16","type":"table-rule-sets"}}}}}
+
+Response:
+  Status: 201 Created
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"13","type":"tables","links":{"self":"http://example.org/v1/tables/13"},"attributes":{"created-at":"2015-09-16T03:42:39.915Z","updated-at":"2015-09-16T03:42:39.915Z"},"relationships":{"table-rule-set":{"links":{"self":"http://example.org/v1/tables/13/relationships/table-rule-set","related":"http://example.org/v1/tables/13/table-rule-set"},"data":{"type":"table-rule-sets","id":"16"}},"rounds":{"links":{"self":"http://example.org/v1/tables/13/relationships/rounds","related":"http://example.org/v1/tables/13/rounds"}},"current-round":{"links":{"self":"http://example.org/v1/tables/13/relationships/current-round","related":"http://example.org/v1/tables/13/current-round"},"data":null}}}}
+
+
+GET /v1/tables/:id
+------------------
+
+Parameters:
+  * id -       ID of the table to be retrieved.
+
+
+Request:
+  GET /v1/tables/14
+  Authorization: Bearer cafe6dcaf00f87e6b18a5f9de093e00541066efd7f8179e40e40efbd107c4d7f
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"14","type":"tables","links":{"self":"http://example.org/v1/tables/14"},"attributes":{"created-at":"2015-09-16T03:42:39.935Z","updated-at":"2015-09-16T03:42:39.935Z"},"relationships":{"table-rule-set":{"links":{"self":"http://example.org/v1/tables/14/relationships/table-rule-set","related":"http://example.org/v1/tables/14/table-rule-set"},"data":{"type":"table-rule-sets","id":"17"}},"rounds":{"links":{"self":"http://example.org/v1/tables/14/relationships/rounds","related":"http://example.org/v1/tables/14/rounds"}},"current-round":{"links":{"self":"http://example.org/v1/tables/14/relationships/current-round","related":"http://example.org/v1/tables/14/current-round"},"data":null}}}}
+
+
+GET /v1/tables
+--------------
+
+Request:
+  GET /v1/tables
+  Authorization: Bearer 01318c08ec7b4466fdac4fcc73fd8cf909e01619c53c0016f72fccb91e795d2f
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"15","type":"tables","links":{"self":"http://example.org/v1/tables/15"},"attributes":{"created-at":"2015-09-16T03:42:39.960Z","updated-at":"2015-09-16T03:42:39.960Z"},"relationships":{"table-rule-set":{"links":{"self":"http://example.org/v1/tables/15/relationships/table-rule-set","related":"http://example.org/v1/tables/15/table-rule-set"},"data":{"type":"table-rule-sets","id":"18"}},"rounds":{"links":{"self":"http://example.org/v1/tables/15/relationships/rounds","related":"http://example.org/v1/tables/15/rounds"}},"current-round":{"links":{"self":"http://example.org/v1/tables/15/relationships/current-round","related":"http://example.org/v1/tables/15/current-round"},"data":null}}}]}

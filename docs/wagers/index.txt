@@ -1,0 +1,63 @@
+GET /v1/wagers/:id
+------------------
+
+Parameters:
+  * id -       ID of the table to be retrieved.
+
+
+Request:
+  GET /v1/wagers/3
+  Authorization: Bearer 95f9d2370ce96254a6567c89d869df23c6c35472dd7c3ed4f7a7ad9fe74bec6f
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"3","type":"wagers","links":{"self":"http://example.org/v1/wagers/3"},"attributes":{"created-at":"2015-09-16T03:42:39.778Z","updated-at":"2015-09-16T03:42:39.778Z","kind":"initial","amount":"100.0"},"relationships":{"hand":{"links":{"self":"http://example.org/v1/wagers/3/relationships/hand","related":"http://example.org/v1/wagers/3/hand"},"data":{"type":"hands","id":"8"}},"player":{"links":{"self":"http://example.org/v1/wagers/3/relationships/player","related":"http://example.org/v1/wagers/3/player"},"data":{"type":"players","id":"9"}}}}}
+
+
+POST /v1/wagers
+---------------
+
+Parameters:
+  * type -       Must always be set to <code>wagers</code>.
+
+  * hand -       The hand that the wager is being placed on.
+
+  * player -       The player that is placing the wager.
+
+  * kind -       The kind of wager that is being placed. Options are `intitial`.
+
+  * amount -       The amount of the wager, as a decimal.
+
+
+Request:
+  POST /v1/wagers
+  Authorization: Bearer 8ffbfe8b3a1080cac212846aa9be0d246f282763d70922bccfefcdeb3b3e1e13
+  Content-Type: application/vnd.api+json
+
+  {"data":{"type":"wagers","relationships":{"hand":{"data":{"id":"9","type":"hands"}},"player":{"data":{"id":"10","type":"players"}}},"attributes":{"kind":"initial","amount":"25"}}}
+
+Response:
+  Status: 201 Created
+  Content-Type: application/vnd.api+json
+
+  {"data":{"id":"4","type":"wagers","links":{"self":"http://example.org/v1/wagers/4"},"attributes":{"created-at":"2015-09-16T03:42:39.840Z","updated-at":"2015-09-16T03:42:39.840Z","kind":"initial","amount":"25.0"},"relationships":{"hand":{"links":{"self":"http://example.org/v1/wagers/4/relationships/hand","related":"http://example.org/v1/wagers/4/hand"},"data":{"type":"hands","id":"9"}},"player":{"links":{"self":"http://example.org/v1/wagers/4/relationships/player","related":"http://example.org/v1/wagers/4/player"},"data":{"type":"players","id":"10"}}}}}
+
+
+GET /v1/wagers
+--------------
+
+Request:
+  GET /v1/wagers
+  Authorization: Bearer 500d41d3fb19f862e94b02b5e68a891baca40b19339105e86fbc2c425aa8d9f3
+  Content-Type: application/vnd.api+json
+
+Response:
+  Status: 200 OK
+  Content-Type: application/vnd.api+json
+
+  {"data":[{"id":"5","type":"wagers","links":{"self":"http://example.org/v1/wagers/5"},"attributes":{"created-at":"2015-09-16T03:42:39.875Z","updated-at":"2015-09-16T03:42:39.875Z","kind":"initial","amount":"100.0"},"relationships":{"hand":{"links":{"self":"http://example.org/v1/wagers/5/relationships/hand","related":"http://example.org/v1/wagers/5/hand"},"data":{"type":"hands","id":"10"}},"player":{"links":{"self":"http://example.org/v1/wagers/5/relationships/player","related":"http://example.org/v1/wagers/5/player"},"data":{"type":"players","id":"11"}}}}]}
+
+

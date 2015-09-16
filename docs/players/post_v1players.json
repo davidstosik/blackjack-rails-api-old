@@ -1,0 +1,45 @@
+{
+  "resource": "Players",
+  "http_method": "POST",
+  "route": "/v1/players",
+  "description": "POST /v1/players",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Must always be set to <code>players</code>.\n"
+    },
+    {
+      "required": true,
+      "scope": "relationships",
+      "name": "user",
+      "description": "      The related user.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/players",
+      "request_body": "{\"data\":{\"type\":\"players\",\"relationships\":{\"user\":{\"data\":{\"id\":\"10\",\"type\":\"users\"}}}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 2f2766cf888837a5f9ecef614897d63def13e9d27d159ca1496ee734f6a27b24"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"1\",\"type\":\"players\",\"links\":{\"self\":\"http://example.org/v1/players/1\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:38.971Z\",\"updated-at\":\"2015-09-16T03:42:38.971Z\"},\"relationships\":{\"user\":{\"links\":{\"self\":\"http://example.org/v1/players/1/relationships/user\",\"related\":\"http://example.org/v1/players/1/user\"},\"data\":{\"type\":\"users\",\"id\":\"10\"}}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "resource": "Tables",
+  "http_method": "GET",
+  "route": "/v1/tables",
+  "description": "GET /v1/tables",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/tables",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 01318c08ec7b4466fdac4fcc73fd8cf909e01619c53c0016f72fccb91e795d2f"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"15\",\"type\":\"tables\",\"links\":{\"self\":\"http://example.org/v1/tables/15\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.960Z\",\"updated-at\":\"2015-09-16T03:42:39.960Z\"},\"relationships\":{\"table-rule-set\":{\"links\":{\"self\":\"http://example.org/v1/tables/15/relationships/table-rule-set\",\"related\":\"http://example.org/v1/tables/15/table-rule-set\"},\"data\":{\"type\":\"table-rule-sets\",\"id\":\"18\"}},\"rounds\":{\"links\":{\"self\":\"http://example.org/v1/tables/15/relationships/rounds\",\"related\":\"http://example.org/v1/tables/15/rounds\"}},\"current-round\":{\"links\":{\"self\":\"http://example.org/v1/tables/15/relationships/current-round\",\"related\":\"http://example.org/v1/tables/15/current-round\"},\"data\":null}}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

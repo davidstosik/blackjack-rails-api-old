@@ -1,0 +1,45 @@
+{
+  "resource": "Tables",
+  "http_method": "POST",
+  "route": "/v1/tables",
+  "description": "POST /v1/tables",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Must always be set to <code>tables</code>.\n"
+    },
+    {
+      "scope": "relationships",
+      "required": true,
+      "name": "table-rule-set",
+      "description": "      The rule set that governs the table.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/tables",
+      "request_body": "{\"data\":{\"type\":\"tables\",\"relationships\":{\"table-rule-set\":{\"data\":{\"id\":\"16\",\"type\":\"table-rule-sets\"}}}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer e3ed252afebf5c8fd4b984c708e685759fb752cf4593aa8ac3d62e13975abb1b"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"13\",\"type\":\"tables\",\"links\":{\"self\":\"http://example.org/v1/tables/13\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.915Z\",\"updated-at\":\"2015-09-16T03:42:39.915Z\"},\"relationships\":{\"table-rule-set\":{\"links\":{\"self\":\"http://example.org/v1/tables/13/relationships/table-rule-set\",\"related\":\"http://example.org/v1/tables/13/table-rule-set\"},\"data\":{\"type\":\"table-rule-sets\",\"id\":\"16\"}},\"rounds\":{\"links\":{\"self\":\"http://example.org/v1/tables/13/relationships/rounds\",\"related\":\"http://example.org/v1/tables/13/rounds\"}},\"current-round\":{\"links\":{\"self\":\"http://example.org/v1/tables/13/relationships/current-round\",\"related\":\"http://example.org/v1/tables/13/current-round\"},\"data\":null}}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

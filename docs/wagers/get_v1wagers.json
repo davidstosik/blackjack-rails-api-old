@@ -1,0 +1,35 @@
+{
+  "resource": "Wagers",
+  "http_method": "GET",
+  "route": "/v1/wagers",
+  "description": "GET /v1/wagers",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/wagers",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 500d41d3fb19f862e94b02b5e68a891baca40b19339105e86fbc2c425aa8d9f3"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"5\",\"type\":\"wagers\",\"links\":{\"self\":\"http://example.org/v1/wagers/5\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.875Z\",\"updated-at\":\"2015-09-16T03:42:39.875Z\",\"kind\":\"initial\",\"amount\":\"100.0\"},\"relationships\":{\"hand\":{\"links\":{\"self\":\"http://example.org/v1/wagers/5/relationships/hand\",\"related\":\"http://example.org/v1/wagers/5/hand\"},\"data\":{\"type\":\"hands\",\"id\":\"10\"}},\"player\":{\"links\":{\"self\":\"http://example.org/v1/wagers/5/relationships/player\",\"related\":\"http://example.org/v1/wagers/5/player\"},\"data\":{\"type\":\"players\",\"id\":\"11\"}}}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "resource": "TablePlayerPositions",
+  "http_method": "GET",
+  "route": "/v1/table-player-positions",
+  "description": "GET /v1/table-player-positions",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/v1/table-player-positions",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 9b7e8e3af387f7889f4e015cbb2c18708d49c7ebde4995c33c253988ea093488"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":[{\"id\":\"3\",\"type\":\"table-player-positions\",\"links\":{\"self\":\"http://example.org/v1/table-player-positions/3\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.613Z\",\"updated-at\":\"2015-09-16T03:42:39.613Z\",\"position\":1},\"relationships\":{\"table\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/3/relationships/table\",\"related\":\"http://example.org/v1/table-player-positions/3/table\"},\"data\":{\"type\":\"tables\",\"id\":\"7\"}},\"player\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/3/relationships/player\",\"related\":\"http://example.org/v1/table-player-positions/3/player\"},\"data\":{\"type\":\"players\",\"id\":\"8\"}},\"hands\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/3/relationships/hands\",\"related\":\"http://example.org/v1/table-player-positions/3/hands\"}},\"current-hands\":{\"links\":{\"self\":\"http://example.org/v1/table-player-positions/3/relationships/current-hands\",\"related\":\"http://example.org/v1/table-player-positions/3/current-hands\"}}}}]}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}

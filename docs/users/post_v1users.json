@@ -1,0 +1,51 @@
+{
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/v1/users",
+  "description": "POST /v1/users",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "type",
+      "description": "      Must always be set to <code>users</code>.\n"
+    },
+    {
+      "required": true,
+      "scope": "attributes",
+      "name": "username",
+      "description": "      The unique identifier for the user.\n"
+    },
+    {
+      "required": true,
+      "scope": "attributes",
+      "name": "password",
+      "description": "      The password with which the user with authenticate.\n"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/v1/users",
+      "request_body": "{\"data\":{\"type\":\"users\",\"attributes\":{\"username\":\"sean\",\"password\":\"drowssap\"}}}",
+      "request_headers": {
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer 61a690acc81eb5030b3e3839174a89baf8db6a7cc8f51f271155dc9d45bdbf8d"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"data\":{\"id\":\"17\",\"type\":\"users\",\"links\":{\"self\":\"http://example.org/v1/users/17\"},\"attributes\":{\"created-at\":\"2015-09-16T03:42:39.098Z\",\"updated-at\":\"2015-09-16T03:42:39.098Z\",\"username\":\"sean\",\"pit-boss\":false}}}",
+      "response_headers": {
+        "Content-Type": "application/vnd.api+json"
+      },
+      "response_content_type": "application/vnd.api+json",
+      "curl": null
+    }
+  ]
+}
